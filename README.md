@@ -1,6 +1,6 @@
 # TwitterFront
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.7.
+Esse é um projeto para eu testar minhas habilidades utilizando Angular, além de aprender novas bibliotecas do framework.
 
 ## Development server
 
