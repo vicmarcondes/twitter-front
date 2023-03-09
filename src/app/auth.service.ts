@@ -12,15 +12,15 @@ export class AuthService {
 
   constructor(private httpClient: HttpClient) { }
 
-  async signup(userData: any) {
+  signup(userData: any) {
     return this.httpClient.post(`${API}/users`, userData);
   }
 
-  async login(userData: any) {
+  login(userData: any) {
     return this.httpClient.post(`${API}/users/login`, userData);
   }
 
-  async setToken(token: string) {
+  setToken(token: string) {
     let decodedToken: any = jwt_decode(token);
     
     const item = {

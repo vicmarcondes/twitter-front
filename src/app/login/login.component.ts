@@ -33,25 +33,24 @@ export class LoginComponent implements OnInit {
   }
 
   async onSubmit() {
-    (await this.authService.signup(this.signupForm.value)).subscribe((data: any) => {
-      if(!data.error) {
-        alert('Conta criada com sucesso!');
-      } else {
-        alert('Erro: ' + data.message);
-      }
-    });
+    let response: any = await this.authService.signup(this.signupForm.value).toPromise();
+    if(!response.error) {
+      alert('Conta criada com sucesso!');
+    } else {
+      alert('Erro: ' + response.message);
+    }    
   }
   
   async login() {
-    (await this.authService.login(this.loginForm.value)).subscribe((data: any) => {
-      if(!data.error) {
-        alert("Login feito com sucesso!");
-        this.authService.setToken(data.access_token);
-        this.router.navigate([""]);
-      } else {
-        alert('Erro: ' + data.message);
-      }
-    })
+    let response: any = await this.authService.login(this.loginForm.value).toPromise();
+
+    if(!response.error) {
+      alert("Login feito com sucesso!");
+      this.authService.setToken(response.access_token);
+      this.router.navigate([""]);
+    } else {
+      alert('Erro: ' + response.message);
+    }
   }
 
 }

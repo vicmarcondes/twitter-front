@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { TimelineService } from 'src/app/timeline.service';
 
 @Component({
@@ -10,6 +11,7 @@ export class TimelineComponent implements OnInit {
 
   timeline: any = [];
   tweetText: string = "";
+  tweetsSubscrtiption: Subscription;
 
   constructor(private timelineService: TimelineService) { }
 
@@ -18,7 +20,7 @@ export class TimelineComponent implements OnInit {
   }
 
   async getTimeline() {
-    (await this.timelineService.getTweets()).subscribe((data: any) => {
+    this.tweetsSubscrtiption = (await this.timelineService.getTweets()).subscribe((data: any) => {
       if(!data.error) {
         this.timeline = data.posts;        
       }
@@ -26,13 +28,18 @@ export class TimelineComponent implements OnInit {
   }
 
   async createTweet() {
-    console.log('>>> this.tweetText', this.tweetText);
-    this.timelineService.createTweeet(this.tweetText).subscribe((data: any) => {
-      if(!data.error) {
-        alert(data.message);
-        this.getTimeline();
-      }
-    })
+    let response: any = await this.timelineService.createTweeet(this.tweetText).toPromise();
+    
+    if(!response.error) {
+      alert(response.message);
+      this.getTimeline();
+    }  
   }
 
+
+  ngOnDestroy() {
+    if(this.tweetsSubscrtiption) {
+      this.tweetsSubscrtiption.unsubscribe();
+    }
+  }
 }
