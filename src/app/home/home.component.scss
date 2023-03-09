@@ -1,0 +1,20 @@
+@import '../../variables.scss';
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-color: $dark-blue;
+  display: flex;
+}
+
+.menu-container {
+  width: 30%;
+  border-right: 1px solid $border-color;
+  height: 100%;
+}
+
+.timeline-container {
+  width: 40%;
+  border-right: 1px solid $border-color;
+  height: 100%;
+}

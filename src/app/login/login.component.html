@@ -1,0 +1,27 @@
+<div class="background">
+</div>
+<div class="white-bar">
+  <div class="login">
+    <form [formGroup]="loginForm">
+      <input formControlName="username" type="text" placeholder="Username">
+      <input formControlName="password" type="password" placeholder="Password">
+      <button (click)="login()" class="second-button">Log in</button>
+    </form>
+  </div>
+
+  <div class='signup-area' *ngIf="!signupMode">
+    <img src="../../assets/images/twitter-logo-vector-png-clipart-1.png">
+    <h2>See what's happening in the world right now</h2>
+    <p>Join Twitter today</p>
+    <button class='primary-button' (click)="signupMode = true">Sign up</button>
+  </div>
+  <div class="signup-area form" *ngIf="signupMode">
+    <h2>Create Account</h2>
+    <form [formGroup]="signupForm" >
+      <input type="text" formControlName="fullname" placeholder="Fullname">
+      <input type="text" formControlName="username" placeholder="Username">
+      <input type="password" formControlName="password" placeholder="Password">
+      <button (click)="onSubmit()" class="primary-button">Sign up</button>
+    </form>
+  </div>
+</div>

@@ -1,1 +1,198 @@
-/* You can add global styles to this file, and also import other style files */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding and margin */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* Remove the margin in Firefox and Safari */
+body {
+  margin: 0;
+}
+
+/* Set default font family */
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Remove the border on images inside links in IE 10 */
+a img {
+  border: none;
+}
+
+/* Add pointer cursor to clickable elements */
+a,
+button {
+  cursor: pointer;
+}
+
+/* Remove the blue highlight on active links in IE 10 */
+a:active {
+  outline: 0;
+}
+
+/* Remove the focus outline on buttons in IE 10 */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+button,
+input[type="reset"],
+input[type="button"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  text-align: center;
+  font-size: inherit;
+  line-height: normal;
+}
+
+/* Hide the overflow in IE */
+textarea {
+  overflow: auto;
+  resize: vertical;
+}
+
+/* Add border and padding to tables in IE */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+table td,
+table th {
+  padding: 0;
+  border: 1px solid #ccc;
+}
+
+/* Set font sizes for heading elements */
+h1 {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+h3 {
+  font-size: 1.17em;
+  margin-bottom: 0.5em;
+}
+
+h4 {
+  font-size: 1.12em;
+}
+
+h5 {
+  font-size: 0.83em;
+}
+
+
+
+h6 {
+  font-size: 0.75em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+
+input:focus-visible {
+  outline: none;
+}
+
+.second-button {
+  background-color: white;
+  border-radius: 24px;
+  padding: 12px;
+  color: #00A3F6;
+  border: 2px solid #00A3F6;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.primary-button {
+  color: white;
+  border-radius: 24px;
+  padding: 12px;
+  background-color: #00A3F6;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+}

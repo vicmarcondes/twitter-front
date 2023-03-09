@@ -1,0 +1,27 @@
+@import '../../../variables.scss';
+
+.new-tweet {
+  padding: 16px 32px;
+  border: 1px solid $border-color;
+  border-left: none;
+  border-right: none;
+  display: flex;
+  flex-direction: column;
+
+  textarea {
+    background-color: $dark-blue;
+    border: none;
+    outline: none;
+    width: 100%;
+    color: white;
+    font-size: 18px;
+    resize: none;
+  }
+
+  button {
+    padding: 12px 24px;
+    align-self: flex-end;
+    margin-top: 8px;
+  }
+
+}

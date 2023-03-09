@@ -1,0 +1,9 @@
+<div>
+  <div class="new-tweet">
+    <textarea [(ngModel)]="tweetText" rows="2" placeholder="What's happening?"></textarea>
+    <button (click)="createTweet()" class="primary-button">Tweet</button>
+  </div>
+  <div class="timeline">
+    <app-tweet *ngFor="let tweet of timeline" [tweetData]="tweet"></app-tweet>
+  </div>
+</div>

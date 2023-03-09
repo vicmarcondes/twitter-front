@@ -1,0 +1,25 @@
+.menu {
+  display: flex;
+  justify-content: flex-end;
+
+
+  .menu-content {
+    display: flex;
+    flex-direction: column;
+    margin-right: 56px;
+    margin-top: 16px;
+
+    img {
+      width: 36px;
+      height: 36px;
+      margin-bottom: 16px;
+    }
+
+    span {
+      cursor: pointer;
+      color: white;
+      font-size: 22px;
+      margin: 16px 0;
+    }
+  }
+}
