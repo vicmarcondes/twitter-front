@@ -22,5 +22,19 @@
     color: white;
     font-size: 16px;
   }
+
+  .like-area {
+    margin-top: 8px;
+    display: flex;
+    justify-content: flex-end;
+    
+    img {
+      cursor: pointer;
+      width: 20px;
+      height: 20px;
+      font-size: 20px;
+    }
+
+  }
 }
 

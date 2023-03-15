@@ -25,6 +25,7 @@ export class AuthService {
     
     const item = {
       token,
+      user_id: decodedToken.id,
       username: decodedToken.username, 
       fullname: decodedToken.fullname
     }

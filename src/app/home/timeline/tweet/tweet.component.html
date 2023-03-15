@@ -4,4 +4,9 @@
   </div>
   <p>{{tweet.text}}</p>
 
+  <div class='like-area'>
+    <img *ngIf="tweet.liked" (click)="likePost()" class="liked" src="../../../../assets/icons/heart-solid.svg">
+    <img *ngIf="!tweet.liked" (click)="likePost()" class="liked" src="../../../../assets/icons/heart-regular.svg">
+  </div>
+
 </div>

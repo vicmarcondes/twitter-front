@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { TimelineService } from 'src/app/timeline.service';
 
 @Component({
   selector: 'app-tweet',
@@ -8,11 +9,16 @@ import { Component, Input, OnInit } from '@angular/core';
 export class TweetComponent implements OnInit {
   @Input('tweetData') tweet: any;
 
-
-  constructor() { }
+  constructor(
+    private timelineService: TimelineService
+  ) { }
 
   ngOnInit(): void {
-    // console.log('>>> this.tweet', this.tweet);
+  }
+
+  likePost() {
+    this.tweet.liked = !this.tweet.liked; 
+    this.timelineService.likePost(this.tweet.liked, this.tweet.id);
   }
 
 }

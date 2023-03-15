@@ -25,3 +25,8 @@
   }
 
 }
+
+.timeline {
+  overflow: auto;
+  height: calc(100vh - 134px);
+}
