@@ -1,9 +1,8 @@
 <div class="menu">
   <div class='menu-content'>
     <img src="../../../assets/images/white-logo-twitter.png">
-    <span>Home</span>
-    <span>Explore</span>
-    <span>Notifications</span>
-    <span>Message</span>
+    <a [routerLink]="['/home']">Home</a>
+    <a [routerLink]="usernameRoute">Profile</a>
+    <a (click)="logout()">Log out</a>
   </div>
 </div>

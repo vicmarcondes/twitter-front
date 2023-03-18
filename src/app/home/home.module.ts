@@ -6,16 +6,21 @@ import { MenuComponent } from './menu/menu.component';
 import { TimelineComponent } from './timeline/timeline.component';
 import { TweetComponent } from './timeline/tweet/tweet.component';
 import { FormsModule } from '@angular/forms';
+import { ProfileComponent } from './profile/profile.component';
 
 const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
     children: [
-      // {
-      //   path: '',
-      //   component: HomeComponent
-      // },
+      { 
+        path: 'home',
+        component: TimelineComponent
+      },
+      {
+        path: ':username',
+        component: ProfileComponent,
+      },
     ]
   },
 ];
@@ -25,7 +30,8 @@ const routes: Routes = [
     HomeComponent,
     MenuComponent,
     TimelineComponent,
-    TweetComponent
+    TweetComponent,
+    ProfileComponent
   ],
   imports: [
     CommonModule,

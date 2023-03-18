@@ -1,0 +1,13 @@
+<div class="home-container">
+  <div class="header">
+    <div>
+      <p class="fullname">{{user?.fullname}}</p>
+      <p class="username">@{{user?.username}}</p>
+    </div>
+    <button class="follow-button">Follow</button>
+  </div>
+
+  <div class="tweets">
+    <app-tweet *ngFor="let tweet of user.posts" [tweetData]="tweet"></app-tweet>
+  </div>
+</div>

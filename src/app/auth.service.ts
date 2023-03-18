@@ -20,6 +20,10 @@ export class AuthService {
     return this.httpClient.post(`${API}/users/login`, userData);
   }
 
+  logout() {
+    localStorage.removeItem('token');
+  }
+
   setToken(token: string) {
     let decodedToken: any = jwt_decode(token);
     
@@ -35,5 +39,11 @@ export class AuthService {
 
   async getToken() {
     return localStorage.getItem('token');
+  }
+
+  getUserDataFromCache() {
+    let token: any = localStorage.getItem('token');
+    console.log('>>> token22', token);
+    return JSON.parse(token);
   }
 }
